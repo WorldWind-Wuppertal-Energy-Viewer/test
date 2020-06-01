@@ -144,7 +144,7 @@ requirejs(['./WorldWindShim',
         layerManager.synchronizeLayerList();
 
         function load_runoff (){
-          var resourceUrl = "./wupper_runoff4.tif";
+          var resourceUrl = "./wupper_runoff.tif";
           WorldWind.GeoTiffReader.retrieveFromUrl(resourceUrl, function (geoTiffReader, xhrStatus) {
             var surfaceGeoTiff = new WorldWind.SurfaceImage(
                 geoTiffReader.metadata.bbox,
