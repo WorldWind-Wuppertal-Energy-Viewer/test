@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Building characterization</TITLE>
+<META NAME="description" CONTENT="Building characterization">
+<META NAME="keywords" CONTENT="wupperwwem_online">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="wupperwwem_online.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html80"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html78"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html72"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html81"
+  HREF="node5.html">Energy simulation</A>
+<B> Up:</B> <A NAME="tex2html79"
+  HREF="node2.html">Methodology</A>
+<B> Previous:</B> <A NAME="tex2html73"
+  HREF="node3.html">3D surface reconstruction</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00022000000000000000"></A>
+<A NAME="subsection:character"></A>
+<BR>
+Building characterization
+</H2> 
+
+<P>
+This study relies on the TABULA building typology [<A
+ HREF="node15.html#loga_tabula_2016">40</A>], which is a product of the EU projects TABULA and EPISCOPE. These projects analysed the European residential building stock with the purpose to define exemplary buildings with information on building envelopes, ventilation, heating and warm water systems. The building types are defined according to the period of construction and size class. The German residential building stock [<A
+ HREF="node15.html#loga_tabulascientific_2012">38</A>] distinguishes 12 periods of construction and four main size classes, as well as a few subclasses which are specific in their construction or to a region. The four size classes are single-family houses (SFH), terraced houses (TH), multi-family houses (MFH) and apartment blocks (AB). The values utilized from TABULA are the U-values of the building surfaces and the energy expenditure coefficients of the heat generators for space heating and hot water. These values are available for all building types and the three states of refurbishment: existing state, usual refurbishment and advanced refurbishment. However, only the existing state and usual refurbishment are considered in this study because no information on the distribution of advanced refurbishment is available. The usual refurbishment differs from the existing state in terms of improved U-values of building surfaces (between 4 and 92 percent) and improved energy expenditure coefficients of heat generators (between 5 and 21 percent). 
+<BR>
+The information on each building type is translated by the mean of OpenStudio [<A
+ HREF="node15.html#guglielmetti_openstudio_2011">24</A>], which is a graphical interface to EPlus, into a model template for building energy simulation. Every template is designed as a single thermal zone with separated heating and warm water systems. The thermal zone is naturally ventilated and heated by baseboard heater.
+<BR>
+After defining the model templates, every building in the study area has to be classified. The year of construction and the number of floors are the main determinants. The distinction between single-family houses and terraced houses is more challenging. The distinguishable properties of a terraced house are shared edges with one or two other residential buildings and similarities in their building footprints. In fact, neighbouring terraced houses resemble each other in shape and appearance. Therefore, if a building with the size of single-family house shares walls with one or two other single-family houses and if the footprint of this house has a similar size and shape, then this building is considered a terraced house. Furthermore, the state of refurbishment can be assigned. However, the determination of whether an specific building was refurbished and to which extent is mostly not possible. To remedy this shortcoming, the progress of refurbishment [<A
+ HREF="node15.html#loga_tabulascientific_2012">38</A>] can be randomly assigned to the buildings. The same random assignment is used for designating buildings with conditioned cellar and roof based on their empirical distribution. If a building has a conditioned cellar, the thermal zone is extended by one floor. In the case of an unconditioned roof, the roof section is excluded from the thermal zone by inserting a ceiling. If the cellar or roof are partly conditioned, then different thermal zones are introduced with an assumed temperature set point of <SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="$5^{\circ}$"></SPAN>C to avoid frost.
+<BR>
+The next step is the generation of EPlus input files, i.e., IDF, for every residential building. In order to automate this process, the Python library Eppy [<A
+ HREF="node15.html#santosh_eppy_2019">54</A>] merges the data of the building envelope, which contains the coordinates of every surface vertex, with the model template of the corresponding building type. Figure <A HREF="node3.html#fig:class">3</A> also indicates the surface classes, which are floor, wall and roof. Surface classification is important because the different classes are exposed to distinct simulation conditions.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html80"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html78"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html72"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html81"
+  HREF="node5.html">Energy simulation</A>
+<B> Up:</B> <A NAME="tex2html79"
+  HREF="node2.html">Methodology</A>
+<B> Previous:</B> <A NAME="tex2html73"
+  HREF="node3.html">3D surface reconstruction</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Maikel Issermann
+</ADDRESS>
+</BODY>
+</HTML>

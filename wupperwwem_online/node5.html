@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Energy simulation</TITLE>
+<META NAME="description" CONTENT="Energy simulation">
+<META NAME="keywords" CONTENT="wupperwwem_online">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="wupperwwem_online.css">
+
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html88"
+  HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html86"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html82"
+  HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html89"
+  HREF="node6.html">Case Study</A>
+<B> Up:</B> <A NAME="tex2html87"
+  HREF="node2.html">Methodology</A>
+<B> Previous:</B> <A NAME="tex2html83"
+  HREF="node4.html">Building characterization</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00023000000000000000"></A>
+<A NAME="subsection:en_sim"></A>
+<BR>
+Energy simulation
+</H2>
+
+<P>
+The underlying energy simulation engine is EPlus [<A
+ HREF="node15.html#crawley_energyplus_2001">10</A>]. The interactive usage of UBEM is possible because of the integration of Functional Mockup Interface (FMI) into EPlus. FMI [<A
+ HREF="node15.html#blochwitz_functional_2011">6</A>] is a standardized interface that enables independent models to communicate and exchange data with each other. At first, the input and output variables need to be defined in the IDFs. For this purpose the external interface of EPlus is activated. The input variables (weather data, occupancy, internal electrical load and water use) are defined as "actuators" in this interface with name, name of component, component type, control type, FMU name and initial value. The output variables (gas, water and electricity meters) additionally require the Energy Management System (EMS) of EPlus, which is an internal programming interface to define custom control and modelling routines. In the EMS, every output variable is defined as a "sensor" with name and reference as well as "output variable" with name, EMS name, data type and update frequency. Besides, the output variables necessitate a specification as "variable" in the external interface with name, FMU name and an index key. Figure <A HREF="#fig:idf">4</A> illustrates how to define an input and output variable in an IDF for the use in FMI.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:idf"></A><A NAME="92"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4:</STRONG>
+IDF code defining an input (wind direction) and output variable (gas meter) for FMI.</CAPTION>
+<TR><TD><img src="idf_sample.png" width="749" height="530"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+The IDF files for each building are then converted by the Python script EnergyPlusToFMU.py to Functional Mockup Units (FMU) [<A
+ HREF="node15.html#nouidui_functional_2014">41</A>]. An FMU is built as a zip file, which essentially contains the shared libraries with C-functions defining the equations of the model and a XML file defining the variables used. The FMI establishes an hierarchy between the models. EPlus is a slave model, while the Python framework PyFMI [<A
+ HREF="node15.html#andersson_pyfmi_2016">3</A>] is the master model. The master model sets the time step and controls the co-simulations. To run the simulations, PyFMI imports and initializes the FMUs as independent computer processes. In 10-min intervals, current weather data (temperature, relative humidity, wind speed and direction) are accessed via the Application Programming Interface (API) of OpenWeather [<A
+ HREF="node15.html#openweather_weather_2020">45</A>] and subsequently transferred to the individual EPlus process, which simulates one building. The values for occupancy, internal electrical load and water use are obtained from standard profiles used in the utility industry [<A
+ HREF="node15.html#funfgeld_anwendung_2000">18</A>] and then changed into schedules in OpenStudio. These schedules describe the normalized variations within one day. Depending on the floor space of the building, the schedule values are modified by the number of habitants. At each time step, the EPlus processes compute with the corresponding input values the heat balance of each building by taking into account the outside temperature, thermal conductivity of the surfaces, heat sinks and sources (heating, human bodies, etc.) in order to estimate the energy required to maintain the indoor target temperature.  This demonstrates the capacity to interact with diverse parameters and receive an immediate feedback. After EPlus finishes the computation of gas, water and electricity demand for the time step, the data are imported back to PyFMI. Current carbon intensity of electricity generation, which is retrieved through the API of  electricityMap [<A
+ HREF="node15.html#tomorrow_live_2020">64</A>], is combined with carbon intensity of fossil fuel combustion to calculate the global warming potential. 
+<BR>
+The data are finally exported as JSON file and uploaded to the web-interface of UBE-FMI [<A
+ HREF="node15.html#issermann_wuppertal_2019">31</A>]. The web-interface is implemented with the JavaScript library NASA WorldWind [<A
+ HREF="node15.html#bell_nasa_2007">5</A>]. NASA WorldWind is a virtual globe that allows to visualize three-dimensional data. The Collada files of the buildings are also visualised and indicate the global warming potential, energy and water demand of the last time step. Figure <A HREF="node2.html#fig:flow">1</A> summaries the structure of UBE-FMI. 
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html88"
+  HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html86"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html82"
+  HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html89"
+  HREF="node6.html">Case Study</A>
+<B> Up:</B> <A NAME="tex2html87"
+  HREF="node2.html">Methodology</A>
+<B> Previous:</B> <A NAME="tex2html83"
+  HREF="node4.html">Building characterization</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Maikel Issermann
+</ADDRESS>
+</BODY>
+</HTML>

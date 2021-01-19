@@ -1,0 +1,23 @@
+No implementation found for style `lineno'
+No implementation found for style `hyperref'
+No implementation found for style `subcaption'
+No implementation found for style `graphicx'
+No implementation found for style `multirow'
+No implementation found for style `pdflscape'
+
+? brace missing for \
+
+Substitution of arg to newlabelxx delayed.
+
+redefining command \ 
+
+? brace missing for \oldnewlabel
+
+? brace missing for \oldcontentsline
+Unrecognized option  to \includegraphics
+
+wupperwwem_online.tex is newer than wupperwwem_online.bbl: Please rerun latex and bibtex.
+couldn't convert character Suml into available encodings
+
+ ...set $ACCENT_IMAGES  to get an image 
+couldn't convert character Sacute into available encodings

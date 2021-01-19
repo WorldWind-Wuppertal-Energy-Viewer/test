@@ -1,0 +1,383 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Case Study</TITLE>
+<META NAME="description" CONTENT="Case Study">
+<META NAME="keywords" CONTENT="wupperwwem_online">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="wupperwwem_online.css">
+
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="wupperwwem_online.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html98"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html96"
+  HREF="wupperwwem_online.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html90"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html99"
+  HREF="node7.html">Results</A>
+<B> Up:</B> <A NAME="tex2html97"
+  HREF="wupperwwem_online.html">Interactive Urban Building Energy</A>
+<B> Previous:</B> <A NAME="tex2html91"
+  HREF="node5.html">Energy simulation</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00030000000000000000">
+Case Study</A>
+</H1>
+
+<P>
+The study area is situated in the German city of Wuppertal. The web-interface of UBE-FMI is called Wuppertal WorldWind Environmental Monitor (WupperWWEM) [<A
+ HREF="node15.html#issermann_wuppertal_2019">31</A>]. The geodata portal of the German federal state North Rhine-Westphalia offers access to LiDAR data with a resolution of 4-10 points/<SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$m^{2}$"></SPAN> [<A
+ HREF="node15.html#geobasis_nrw_3d-messdaten_2020">19</A>] for every municipality. In addition to LiDAR data, a comprehensive data set on the year of construction for residential buildings is an essential requirement. According to the knowledge of the author, the City of Wuppertal is the sole provider in Germany of the year of construction for every residential and non-residential building [<A
+ HREF="node15.html#stadt_wuppertal_wohngebaude-baujahre_2020">59</A>]. The spatial distribution of buildings can be seen in Figure <A HREF="#fig:age">5</A>. The year of construction of residential buildings is indicated according to color, while non-residential buildings are black. 
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:age"></A><A NAME="111"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5:</STRONG>
+Year of construction of residential buildings (non-residential buildings in black) in Wuppertal (study area framed in red).</CAPTION>
+<TR><TD><img src="wt_ws_agemap.jpg" width="1761" height="892"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+In the study area, there are over 5700 residential buildings. Residential buildings with mixed usages (e.g. retail shops, doctor's surgery) were identified by the tags in OSM and excluded. Following the procedure described in Section <A HREF="node4.html#subsection:character">2.2</A>, the segmentation of the building types according to the TABULA building typology is summarized in Figure <A HREF="#fig:pie">6</A>. The parameters characterising a building energy model are the U-values of the building surfaces and the energy expenditure coefficients of the heat generators for space heating and hot water. The 41 building types have each 8 versions, which depends on the state of refurbishment and heating system, and each version has 8 parameters.  The authors kindly refer to the project website of TABULA building typology [<A
+ HREF="node15.html#noauthor_tabula_2020">1</A>] to find the exact parameter values because the corresponding number of parameter values are impractical to display. According to Figure <A HREF="#fig:pie">6</A>, Wuppertal features dense built-up areas and less urban sprawl. The housing sector mainly consists of multi-family buildings, but few buildings over 6 floors, i.e., apartment blocks. The majority of residential buildings was constructed before 1968. 
+<BR>
+UBE-FMI requires additional assumptions to complete the modelling. The number of occupants in a building was inferred from the average living area per person in Wuppertal of 41<SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$m^{2}$"></SPAN> [<A
+ HREF="node15.html#statistisches_gebaude_2011">60</A>]. The progress of refurbishment and whether the cellar and roof are conditioned were randomly assigned following the detailed statistics of the German housing stock [<A
+ HREF="node15.html#loga_tabulascientific_2012">38</A>]. The assignment of the energy carrier for each building followed the same procedure with values from the local distribution in 2010 [<A
+ HREF="node15.html#reutter_low_2012">51</A>]. The definition of the state of refurbishment refers to the description in TABULA building typology. In this study, only the existing state and usual refurbishment were considered. Table <A HREF="#tab:real">1</A> summarizes the details of the simulation on which the web-interface rests.
+<BR>
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:pie"></A><A NAME="125"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6:</STRONG>
+Segmentation of building types in the study area (legend is sorted according to occurrence).</CAPTION>
+<TR><TD><iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="pie_types.html" height="1000" width="1200"></iframe></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Besides the simulation for the web-interface, another set of simulations was needed to indicate the appropriateness of the building modelling concept and to discover discrepancies. Unfortunately, the attempts to find time-series on energy consumption remained futile and poses a constant challenge in urban energy modelling. The reasons range from privacy issues for household data to competition regulation for district-wise measured data. Consequently, the results of the simulations are compared to reference studies. This approach was inspired by a previous study in UBEM [<A
+ HREF="node15.html#davila_modeling_2016">11</A>]. Simulated annual energy use intensities (EUI) were compared with reference studies (Fisch et al. 2012 [<A
+ HREF="node15.html#fisch_vergleichswerte_2012">15</A>], Schr&#246;der et al. 2014 [<A
+ HREF="node15.html#schroder_reale_2014">57</A>] and Loga et al. 2017 [<A
+ HREF="node15.html#loga_berucksichtigung_2017">39</A>]). Four simulation set-ups with different states of refurbishment and energy carriers were constructed and simulated: existing state with oil/gas heating; existing state with district heating; usual refurbishment with oil/gas heating; usual refurbishment with district heating. Table <A HREF="#tab:vali">2</A> gives an overview of the conditions for each set-up. 
+<BR>
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="142"></A>
+<TABLE>
+<CAPTION><STRONG>Table 1:</STRONG>
+Summary of simulation conditions for UBE-FMI in "live" mode.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><TABLE CELLPADDING=2 BORDER="1">
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Purpose</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>"live" simulation (web-interface)</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>State of refurbishment</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>existing state / usual refurbishment</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Share of refurbishment</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>28% for SFH built until 1978, 11.5% for SFH built 1979-1994, 32.2% for MFH built until 1978, 17.2% for MFH built 1979-1994, Buildings built after 1995 are not refurbished</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Energy carriers</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>gas (51%), oil (33.6%), district heat (10.2%), electricity (5.2%, without heat pump)</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Number of buildings</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>5736</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Year of construction</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227><SPAN CLASS="MATH"><IMG
+ WIDTH="52" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$\leq2018$"></SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Building sizes</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>SFH, TH, MFH, AB</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Building systems</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>heating / hot water</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Heating value</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>higher heating value (HHV)</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Conditioned roof</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>completely (33.6%), partly (17.9%), not (48.5%)</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Conditioned cellar</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>completely (3.3%), partly (22.2%), not (61.9%), not existent (12.6%)</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Simulation period</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>none (with 10min time step)</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Weather data</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>"live" weather from OpenWeather [<A
+ HREF="node15.html#openweather_weather_2020">45</A>]</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Weather harmonization</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>none</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Reference area</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>EnEV reference area</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Remarks</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=227>only MFH use district heat; Buildings constructed between 1995 and 2001 use gas boilers</TD>
+</TR>
+</TABLE>
+
+<A NAME="tab:real"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+The set-ups in Table <A HREF="#tab:vali">2</A> were constructed with the intention to achieve comparable conditions with the reference studies. These studies gathered their data from companies issuing energy performance certificates (EPC). The certification procedure is stipulated in the German Energy Saving Ordinance (EnEV) [<A
+ HREF="node15.html#enev_2002">7</A>]. Both studies used a sizeable data set on buildings. Schr&#246;der et al. 2014 separated the results for space heating and hot water. Since Schr&#246;der et al. 2014 only distinguished between old and modern buildings in their existing state but not refurbished buildings, it was not considered in the comparison with the set-up concerning usual refurbishment. The study of Fisch et al. 2012 differs in that it contains a class of refurbishment compromised of buildings built after 1995 and completely refurbished buildings. The authors saw it necessary to convert the values of their original data set from higher heating value (HHV) to lower heating value (HHV) by multiplying with 0.9. The results were hence back-converted to HHV for comparison. The study of Loga et al. 2017 [<A
+ HREF="node15.html#loga_berucksichtigung_2017">39</A>] provides an harmonized table for buildings in their existing state of both studies, thereby offering a broader data set to compare with. Details of the reference studies can be seen in Table <A HREF="#tab:ref">3</A>. Unfortunately, none of the studies provided a detailed analysis of parameter values concerning refurbishment. For that reason, the state of refurbishment in this study refers to the definition of usual refurbishment in TABULA building typology. 
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="201"></A>
+<TABLE>
+<CAPTION><STRONG>Table 2:</STRONG>
+Summary of simulation conditions for comparison to reference studies.</CAPTION>
+<TR><TD><TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Purpose</TD>
+<TD ALIGN="CENTER" COLSPAN=4><SPAN>Comparison to reference studies (4 simulations)</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>State of refurbishment</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=91>existing state</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=99>existing state</TD>
+<TD ALIGN="LEFT" COLSPAN=2><SPAN>usual refurbishment until 1995, existing state for 1995 to 2002</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Energy carriers</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=91>gas (60%) / oil (40%)</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=99>district heat (100%)</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=133>gas (60%) / oil (40%)</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=99>district heat (100%)</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Number of buildings</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=91>4835</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=99>4835</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=133>5414</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=99>5414</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Year of construction</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=91><SPAN CLASS="MATH"><IMG
+ WIDTH="52" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$&lt;1979$"></SPAN></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=99><SPAN CLASS="MATH"><IMG
+ WIDTH="52" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$&lt;1979$"></SPAN></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=133><SPAN CLASS="MATH"><IMG
+ WIDTH="52" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$&lt;2002$"></SPAN></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=99><SPAN CLASS="MATH"><IMG
+ WIDTH="52" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$&lt;2002$"></SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Building sizes</TD>
+<TD ALIGN="CENTER" COLSPAN=4><SPAN>SFH, TH, MFH, AB</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Building systems</TD>
+<TD ALIGN="CENTER" COLSPAN=4><SPAN>heating / hot water</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Heating value</TD>
+<TD ALIGN="CENTER" COLSPAN=4><SPAN>HHV</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Conditioned roof</TD>
+<TD ALIGN="CENTER" COLSPAN=4><SPAN>completely (33.6%), partly (17.9%), not (48.5%)</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Conditioned cellar</TD>
+<TD ALIGN="CENTER" COLSPAN=4><SPAN>completely (3.3%), partly (22.2%), not (61.9%), not existent (12.6%)</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Simulation period</TD>
+<TD ALIGN="CENTER" COLSPAN=4><SPAN>one year (with 10min time step)</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Weather data</TD>
+<TD ALIGN="CENTER" COLSPAN=4><SPAN>long-term average of Wuppertal</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Weather harmonization</TD>
+<TD ALIGN="CENTER" COLSPAN=4><SPAN>according to EnEV </SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Reference area</TD>
+<TD ALIGN="CENTER" COLSPAN=4><SPAN>EnEV reference area</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Reference to results</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=91>Figure <A HREF="node8.html#fig:unrefurb">8</A>a</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=99>Figure <A HREF="node8.html#fig:unrefurb">8</A>b</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=133>Figure <A HREF="node8.html#fig:refurb_gas">9</A></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=99>Figure <A HREF="node8.html#fig:refurb_dist">10</A></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Remarks</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=91>&nbsp;</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=99>SFH uses the same values of MFH for heating</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=133>Buildings constructed between 1995 and 2001 use gas boilers</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=99>SFH uses the same values of MFH for heating</TD>
+</TR>
+</TABLE>
+
+<A NAME="tab:vali"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="235"></A>
+<TABLE>
+<CAPTION><STRONG>Table 3:</STRONG>
+Description of reference studies.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Studies</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=71>Fisch et al. 2012 [<A
+ HREF="node15.html#fisch_vergleichswerte_2012">15</A>]</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=68>Schr&#246;der et al. 2014 [<A
+ HREF="node15.html#schroder_reale_2014">57</A>]</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=69>Loga et al. 2017 [<A
+ HREF="node15.html#loga_berucksichtigung_2017">39</A>]</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Data source</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=71>Empirical data from the issuance of EPCs</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=68>Empirical data from the issuance of EPCs</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=69>harmonized table of [<A
+ HREF="node15.html#fisch_vergleichswerte_2012">15</A>] and  [<A
+ HREF="node15.html#schroder_reale_2014">57</A>]</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>State of refurbishment (used here)</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=71>4 classes (built after 1995 / completely refurbished)</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=68>existing state</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=69>existing state</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Number of buildings (used here)</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=71>57,562 (13,607)</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=68>138,550 (none)</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=69>153,267 (98,747)</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Periods of construction (used here)</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=71>none</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=68>4 classes (none)</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=69>4 classes (<SPAN CLASS="MATH"><IMG
+ WIDTH="52" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$&lt;1979$"></SPAN>)</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Building sizes (used here)</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=71>4 classes (all while 2 classes were merged)</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=68>5 classes (none)</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=69>2 classes (all)</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Building systems</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=71>heating / hot water</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=68>heating and hot water (separately)</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=69>heating / hot water</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Heating value</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=71>LHV = 0.9 HHV</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=68>HHV</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=69>HHV</TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Energy carriers</TD>
+<TD ALIGN="CENTER" COLSPAN=3><SPAN>gas / oil and district heat</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Weather harmonization</TD>
+<TD ALIGN="CENTER" COLSPAN=3><SPAN>according to EnEV</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Reference area</TD>
+<TD ALIGN="CENTER" COLSPAN=3><SPAN>EnEV reference area</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Data collection area</TD>
+<TD ALIGN="CENTER" COLSPAN=3><SPAN>national</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Results</TD>
+<TD ALIGN="CENTER" COLSPAN=3><SPAN>annual energy use intensities (EUI in kWh/m2a)</SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=102>Reference to results</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=71>Figure <A HREF="node8.html#fig:refurb_gas">9</A> and <A HREF="node8.html#fig:refurb_dist">10</A></TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=68>none</TD>
+<TD ALIGN="LEFT" VALIGN="TOP" WIDTH=69>Figure <A HREF="node8.html#fig:unrefurb">8</A></TD>
+</TR>
+</TABLE>
+
+<A NAME="tab:ref"></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html98"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html96"
+  HREF="wupperwwem_online.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html90"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html99"
+  HREF="node7.html">Results</A>
+<B> Up:</B> <A NAME="tex2html97"
+  HREF="wupperwwem_online.html">Interactive Urban Building Energy</A>
+<B> Previous:</B> <A NAME="tex2html91"
+  HREF="node5.html">Energy simulation</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Maikel Issermann
+</ADDRESS>
+</BODY>
+</HTML>

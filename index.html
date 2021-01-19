@@ -1,124 +1,245 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <!--NOTE: Most Web WorldWind examples use jquery, Bootstrap and requirejs but those technologies are NOT-->
-    <!--required by Web WorldWind. See SimplestExample.html for an example of using Web WorldWind without them.-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js"></script>
-    <script data-main="app.js" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.17/require.min.js"></script>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Wuppertal WorldWind Environmental Monitor">
+        <meta name="author" content="Maikel Issermann">
 
-</head>
+        <title>Wuppertal WorldWind Environmental Monitor</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Bootstrap 4.0 CSS compiled and minified -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <!-- Font Awesome icons (see: https://fontawesome.com/icons?d=gallery) -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" 
+              integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+        <!-- Custom styles and overrides -->
+        <link href="custom.css" rel="stylesheet">
+    </head>
 <body>
-<div class="container-fluid">
-    <div class="jumbotron hidden-xs">
-        <h1 style="text-align:center">Wuppertal WorldWind Environmental Monitor</h1>
-        <!--<h1><iframe src="https://www.mcc-berlin.net/fileadmin/data/clock/carbon_clock.htm?i=3267263" style="width:400px; height:250px;" align="right"></iframe></h1>-->
-    </div>
+        <!--Main Menu--> 
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+            <a class="navbar-brand" href="https://github.com/WupperWWEM/wupperwwem.github.io">
+                <i class="fa fa-github-square" style="font-size:25px"></i>
+                WupperWWEM
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <div class="row">
-        <div class="col-sm-2">
-            
-            <h4>Layers</h4>
-            <div class="list-group" id="layerList">
+            <!--Main menu content-->
+            <div class="collapse navbar-collapse" id="main-menu">
+                <ul class="navbar-nav w-100">
+                    <!--Layers-->
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#layers" role="button">
+                            <span class="fas fa-list" aria-hidden="true"></span>
+                            <span class="d-md-none d-lg-inline" aria-hidden="true">Layers</span>
+                        </a>
+                    </li>
+                    <!--Data-->
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#data" role="button">
+                            <span class="fas fa-info-circle" aria-hidden="true"></span>
+                            <span class="d-md-none d-lg-inline" aria-hidden="true">Data</span>
+                        </a>
+                    </li>
+      
+                    <!--About-->
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#about" role="button">
+                            <span class="fas fa-address-card" aria-hidden="true"></span>
+                            <span class="d-md-none d-lg-inline" aria-hidden="true">About</span>
+                        </a>
+                    </li>
+                 </ul>
             </div>
-            <br>
 
-            <h4>Select Data (for the last 10 miniutes)</h4>
-            <select id="select-data">
-            </select>
-            <br>
-            <br>
-            <div>
-                <h4>Legend</h4>
-                <table>
-                    <tr>
-                        <td><canvas id="no1cID" width="20" height="20"> </canvas></td>
-                        <td></td>
-                        <td><span id="no1sID"></span> - <span id="no1eID"></span></td>
-                    </tr>
+          <div class="dropdown" style="width:300px;">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Carbon Clock
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><iframe src="https://www.mcc-berlin.net/fileadmin/data/video/carbon_clock_s/carbon_clock.htm" style="width:500; height:266px;"></iframe></li>
+            </ul>
+          </div>
+        </nav>
+        
+        <!-- Main content -->
+        <!-- Use container-fluid for 100% width and set padding to 0 -->
+        <main role="main" class="container-fluid p-0">
 
-                    <tr>
-                            <td><canvas id="no2cID" width="20" height="20"> </canvas></td>
-                            <td></td>
-                            <td><span id="no2sID"></span> - <span id="no2eID"></span></td>
-                    </tr>
-
-                    <tr>
-                            <td><canvas id="no3cID" width="20" height="20"> </canvas></td>
-                            <td></td>
-                            <td><span id="no3sID"></span> - <span id="no3eID"></span></td>
-                    </tr>
-
-                    <tr>
-                            <td><canvas id="no4cID" width="20" height="20"> </canvas></td>
-                            <td></td>
-                            <td><span id="no4sID"></span> - <span id="no4eID"></span></td>
-                    </tr>
-
-                    <tr>
-                            <td><canvas id="no5cID" width="20" height="20"> </canvas></td>
-                            <td></td>
-                            <td><span id="no5sID"></span> - <span id="no5eID"></span></td>
-                    </tr>
-
-                    <tr>
-                            <td><canvas id="no6cID" width="20" height="20"> </canvas></td>
-                            <td></td>
-                            <td><span id="no6sID"></span> - <span id="no6eID"></span></td>
-                    </tr>
-
-                    <tr>
-                            <td><canvas id="no7cID" width="20" height="20"> </canvas></td>
-                            <td></td>
-                            <td><span id="no7sID"></span> - <span id="no7eID"></span></td>
-                    </tr>
-
-                    <tr>
-                            <td><canvas id="no8cID" width="20" height="20"> </canvas></td>
-                            <td></td>
-                            <td><span id="no8sID"></span> - <span id="no8eID"></span></td>
-                    </tr>
-
-                    <tr>
-                            <td><canvas id="no9cID" width="20" height="20"> </canvas></td>
-                            <td></td>
-                            <td><span id="no9sID"></span> - <span id="no9eID"></span></td>
-                    </tr>
-
-                    <tr>
-                            <td><canvas id="no10cID" width="20" height="20"> </canvas></td>
-                            <td></td>
-                            <td><span id="no10sID"></span> - <span id="no10eID"></span></td>
-                    </tr>
-                </table>
+            <!-- WorldWindow -->
+            <div id="globe" class="globe p-0">
+                <canvas id="canvasOne" class="d-block"
+                        style="width: 100%; height: 100%; 
+                        background-color: rgb(36,74,101);">
+                </canvas>            
             </div>
-            
-            <br>
-            <br>
-
-            <div>
-            <a title="My Profile On ResearchGate" href="https://www.researchgate.net/profile/Maikel_Issermann2?cp=shp"><img src="https://www.researchgate.net/images/public/profile_share_badge.png" alt="My Profile On ResearchGate" /></a>
-<a href="mailto:m.issermann@outlook.com">Send mail</a>
+         
+            <!--WorldWindow Panels-->
+            <div class="globe-overlay noninteractive">
+                <div class="card-columns">
+                    <!--Layers-->
+                    <div id="layers" class="collapse" >
+                        <div class="card globe-card interactive">
+                            <div class="card-header">
+                                <h5 class="card-title">
+                                    <span class="fas fa-list" aria-hidden="true"></span>
+                                    Layers
+                                    <button type="button" class="close pull-right" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button></h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="list-group" id="layerList">
             </div>
-            
-        </div>
+                            </div>                    
+                        </div>
+                    </div>
+                    <!--data-->
+                    <div id="data" class="collapse">
+                        <div class="card globe-card interactive">
+                            <div class="card-header">
+                                <h5 class="card-title">
+                                    <span class="fas fa-info-circle" aria-hidden="true"></span>
+                                    Data
+                                    <button type="button" class="close pull-right" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button></h5>
+                            </div>                
+                            <div class="card-body">
+                                    <!-- Bind the list to the 'markers' observableArray -->
+                                    <h7>Select Data (for the last 10 miniutes)</h7>
+                                    <select id="select-data"></select>
+                                    <br>
+                                    <br>
+                                    <table>
+                                    <tr>
+                                        <td><canvas id="no1cID" width="20" height="20"> </canvas></td>
+                                        <td></td>
+                                        <td><span id="no1sID"></span> - <span id="no1eID"></span></td>
+                                    </tr>
 
-        <div class="col-sm-10" id="globe">
-            <canvas id="canvasOne" width="1000" height="550"
-                    style="width: 100%; height: 100%; background-color: black;">
-                Your browser does not support HTML5 Canvas.
-                    </canvas>
-        </div>
+                                    <tr>
+                                            <td><canvas id="no2cID" width="20" height="20"> </canvas></td>
+                                            <td></td>
+                                            <td><span id="no2sID"></span> - <span id="no2eID"></span></td>
+                                    </tr>
 
+                                    <tr>
+                                            <td><canvas id="no3cID" width="20" height="20"> </canvas></td>
+                                            <td></td>
+                                            <td><span id="no3sID"></span> - <span id="no3eID"></span></td>
+                                    </tr>
 
+                                    <tr>
+                                            <td><canvas id="no4cID" width="20" height="20"> </canvas></td>
+                                            <td></td>
+                                            <td><span id="no4sID"></span> - <span id="no4eID"></span></td>
+                                    </tr>
 
-    </div>
-</div>
+                                    <tr>
+                                            <td><canvas id="no5cID" width="20" height="20"> </canvas></td>
+                                            <td></td>
+                                            <td><span id="no5sID"></span> - <span id="no5eID"></span></td>
+                                    </tr>
 
+                                    <tr>
+                                            <td><canvas id="no6cID" width="20" height="20"> </canvas></td>
+                                            <td></td>
+                                            <td><span id="no6sID"></span> - <span id="no6eID"></span></td>
+                                    </tr>
 
-</body>
+                                    <tr>
+                                            <td><canvas id="no7cID" width="20" height="20"> </canvas></td>
+                                            <td></td>
+                                            <td><span id="no7sID"></span> - <span id="no7eID"></span></td>
+                                    </tr>
+
+                                    <tr>
+                                            <td><canvas id="no8cID" width="20" height="20"> </canvas></td>
+                                            <td></td>
+                                            <td><span id="no8sID"></span> - <span id="no8eID"></span></td>
+                                    </tr>
+
+                                    <tr>
+                                            <td><canvas id="no9cID" width="20" height="20"> </canvas></td>
+                                            <td></td>
+                                            <td><span id="no9sID"></span> - <span id="no9eID"></span></td>
+                                    </tr>
+
+                                    <tr>
+                                            <td><canvas id="no10cID" width="20" height="20"> </canvas></td>
+                                            <td></td>
+                                            <td><span id="no10sID"></span> - <span id="no10eID"></span></td>
+                                    </tr>
+                                </table>
+                            </div>                    
+                        </div>
+                    </div>
+
+                    <!--About-->
+                    <div id="about" class="collapse">
+                        <div class="card globe-card interactive">
+                            <div class="card-header">
+                                <h5 class="card-title">
+                                    <span class="fas fa-address-card" aria-hidden="true"></span>
+                                    About
+                                    <button type="button" class="close pull-right" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button></h5>
+                            </div>                
+                            <div class="card-body">
+                                    <a href="wupperwwem_online/wupperwwem_online.html" target="_blank">Associated Research</a>
+                                    <br>
+                                    <br>
+                                    <a title="My Profile On Linkedin"       href="https://www.linkedin.com/in/maikel-issermann-07035682">        <i class="fa fa-linkedin-square" style="font-size:48px"></i> </a>
+                                    <a title="My Profile On Google Scholar" href="https://scholar.google.com/citations?hl=en&user=lPgJ2HwAAAAJ"> <i class="ai ai-google-scholar-square ai-3x"></i></a>
+                                    <a title="My Profile On ResearchGate"   href="https://www.researchgate.net/profile/Maikel_Issermann2?cp=shp"><i class="ai ai-researchgate ai-3x"></i></a>
+                                    <br>
+                                    <a href="mailto:m.issermann@outlook.com">Send mail</a>
+                                   
+                            </div>                    
+                        </div>
+                    </div>                
+                        
+                    <!--Carbon-->
+                    <div id="carbon" class="collapse">
+                        <div class="card globe-card interactive">
+                            <div class="card-header">
+                                <h5 class="card-title">
+                                    Carbon Clock
+                                    <button type="button" class="close pull-right" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button></h5>
+                            </div>                
+                            <div class="card-body">
+                                 <iframe src="https://www.mcc-berlin.net/fileadmin/data/video/carbon_clock_s/carbon_clock.htm" style="width:300; height:266px;"></iframe>
+                            </div>                    
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+           
+
+        </main>
+
+        <!-- JavaScript -->
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+        <script src="https://files.worldwind.arc.nasa.gov/artifactory/web/0.9.0/worldwind.min.js"></script>
+        <!-- <script src="https://unpkg.com/worldwindjs@1.7.0/build/dist/worldwind.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.17/require.min.js"></script>
+        <script src="utils.js"></script>
+        <script src="app.js" type='text/javascript'></script>
+    </body>
 </html>

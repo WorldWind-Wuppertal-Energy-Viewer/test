@@ -1,0 +1,426 @@
+\begin{thebibliography}{10}
+
+\bibitem{noauthor_tabula_2020}
+{TABULA} {WebTool}, 2020.
+
+\bibitem{abbasabadi_urban_2019}
+{\sc Abbasabadi, N., and Ashayeri, M.}
+\newblock Urban energy use modeling methods and tools: {A} review and an
+  outlook.
+\newblock {\em Building and Environment 161\/} (2019), 106270.
+\newblock Publisher: Elsevier.
+
+\bibitem{andersson_pyfmi_2016}
+{\sc Andersson, C., Akesson, J., and F\"{u}hrer, C.}
+\newblock {\em Pyfmi: {A} python package for simulation of coupled dynamic
+  models with the functional mock-up interface}.
+\newblock Centre for Mathematical Sciences, Lund University, 2016.
+
+\bibitem{behboodi_renewable_2016}
+{\sc Behboodi, S., Chassin, D.~P., Crawford, C., and Djilali, N.}
+\newblock Renewable resources portfolio optimization in the presence of demand
+  response.
+\newblock {\em Applied Energy 162\/} (2016), 139--148.
+\newblock Publisher: Elsevier.
+
+\bibitem{bell_nasa_2007}
+{\sc Bell, D.~G., Kuehnel, F., Maxwell, C., Kim, R., Kasraie, K., Gaskins, T.,
+  Hogan, P., and Coughlan, J.}
+\newblock {NASA} {World} {Wind}: {Opensource} {GIS} for mission operations.
+\newblock In {\em 2007 {IEEE} {Aerospace} {Conference}\/} (2007), IEEE,
+  pp.~1--9.
+
+\bibitem{blochwitz_functional_2011}
+{\sc Blochwitz, T., Otter, M., Arnold, M., Bausch, C., Elmqvist, H., Junghanns,
+  A., Mauß, J., Monteiro, M., Neidhold, T., and Neumerkel, D.}
+\newblock The functional mockup interface for tool independent exchange of
+  simulation models.
+\newblock In {\em Proceedings of the 8th {International} {Modelica}
+  {Conference}; {March} 20th-22nd; {Technical} {Univeristy}; {Dresden};
+  {Germany}\/} (2011), Linköping University Electronic Press, pp.~105--114.
+
+\bibitem{enev_2002}
+{\sc {Bundesministerium f{\"u}r Verkehr, Bau und Stadtentwicklung (BMVBS)}}.
+\newblock Bekanntmachung der {Regeln} zur {Datenaufnahme} und {Datenverwendung}
+  im {Wohngeb{\"a}udebestand}, 2002.
+
+\bibitem{cignoni_meshlab_2008}
+{\sc Cignoni, P., Callieri, M., Corsini, M., Dellepiane, M., Ganovelli, F., and
+  Ranzuglia, G.}
+\newblock Meshlab: an open-source mesh processing tool.
+\newblock In {\em Eurographics {Italian} chapter conference\/} (2008),
+  vol.~2008, pp.~129--136.
+
+\bibitem{connolly_heat_2014}
+{\sc Connolly, D., Lund, H., Mathiesen, B.~V., Werner, S., M\"{o}ller, B.,
+  Persson, U., Boermans, T., Trier, D., \O{}stergaard, P.~A., and Nielsen, S.}
+\newblock Heat {Roadmap} {Europe}: {Combining} district heating with heat
+  savings to decarbonise the {EU} energy system.
+\newblock {\em Energy policy 65\/} (2014), 475--489.
+\newblock Publisher: Elsevier.
+
+\bibitem{crawley_energyplus_2001}
+{\sc Crawley, D.~B., Lawrie, L.~K., Winkelmann, F.~C., Buhl, W.~F., Huang,
+  Y.~J., Pedersen, C.~O., Strand, R.~K., Liesen, R.~J., Fisher, D.~E., and
+  Witte, M.~J.}
+\newblock {EnergyPlus}: creating a new-generation building energy simulation
+  program.
+\newblock {\em Energy and Buildings 33}, 4 (2001), 319--331.
+\newblock Publisher: Elsevier.
+
+\bibitem{davila_modeling_2016}
+{\sc Davila, C.~C., Reinhart, C.~F., and Bemis, J.~L.}
+\newblock Modeling {Boston}: {A} workflow for the efficient generation and
+  maintenance of urban building energy models from existing geospatial
+  datasets.
+\newblock {\em Energy 117\/} (2016), 237--250.
+
+\bibitem{entso-e_entso-e_2020}
+{\sc {ENTSO-E}}.
+\newblock {ENTSO}-{E} {Transparency} {Platform}, 2020.
+
+\bibitem{fabbri_top-down_2014}
+{\sc Fabbri, K., and Tarabusi, V.}
+\newblock Top-down and bottom-up methodologies for energy building performance
+  evaluation at meso-scale level-{A} literature review.
+\newblock {\em J. Civ. Eng. Archit. Res 1}, 5 (2014), 283--299.
+
+\bibitem{ferrari_assessment_2019}
+{\sc Ferrari, S., Zagarella, F., Caputo, P., and Bonomolo, M.}
+\newblock Assessment of tools for urban energy planning.
+\newblock {\em Energy 176\/} (2019), 544--551.
+\newblock Publisher: Elsevier.
+
+\bibitem{fisch_vergleichswerte_2012}
+{\sc Fisch, N., Altendorf, L., K{\"u}hl, L., Wilken, T., Brandt, E., and
+  Gawron, T.}
+\newblock Vergleichswerte f{\"u}r {Verbrauch} bei {Wohngeb{\"a}uden}.
+\newblock {BBSR} / {BMVBS}-{Online}-{Publikation}~11, 2012.
+
+\bibitem{fischer_model_2015}
+{\sc Fischer, D., H{\"a}rtl, A., and Wille-Haussmann, B.}
+\newblock Model for electric load profiles with high time resolution for
+  {German} households.
+\newblock {\em Energy and Buildings 92\/} (2015), 170--179.
+\newblock Publisher: Elsevier.
+
+\bibitem{fonseca_city_2016}
+{\sc Fonseca, J.~A., Nguyen, T.-A., Schlueter, A., and Marechal, F.}
+\newblock City {Energy} {Analyst} ({CEA}): {Integrated} framework for analysis
+  and optimization of building energy systems in neighborhoods and city
+  districts.
+\newblock {\em Energy and Buildings 113\/} (2016), 202--226.
+\newblock Publisher: Elsevier.
+
+\bibitem{funfgeld_anwendung_2000}
+{\sc F{\"u}nfgeld, C., and Tiedemann, R.}
+\newblock {\em Anwendung der repr{\"a}sentativen {VDEW}-{Lastprofile}:
+  step-by-step}.
+\newblock VDEW, 2000.
+
+\bibitem{geobasis_nrw_3d-messdaten_2020}
+{\sc {Geobasis NRW}}.
+\newblock {3D}-{Messdaten} {Laserscanning} – {Paketierung}: {Gemeinden},
+  2020.
+
+\bibitem{gils_assessment_2014}
+{\sc Gils, H.~C.}
+\newblock Assessment of the theoretical demand response potential in {Europe}.
+\newblock {\em Energy 67\/} (2014), 1--18.
+\newblock Publisher: Elsevier.
+
+\bibitem{gils_balancing_2015}
+{\sc Gils, H.~C.}
+\newblock Balancing of intermittent renewable power generation by demand
+  response and thermal energy storage.
+
+\bibitem{google_google_2020}
+{\sc {Google}}.
+\newblock Google {Environmental} {Insights} {Explorer}, 2020.
+
+\bibitem{groger_citygmlinteroperable_2012}
+{\sc Gr{\"o}ger, G., and Pl{\"u}mer, L.}
+\newblock {CityGML}-{Interoperable} semantic {3D} city models.
+\newblock {\em ISPRS Journal of Photogrammetry and Remote Sensing 71\/} (2012),
+  12--33.
+\newblock Publisher: Elsevier.
+
+\bibitem{guglielmetti_openstudio_2011}
+{\sc Guglielmetti, R., Macumber, D., and Long, N.}
+\newblock {OpenStudio}: an open source integrated analysis platform.
+\newblock Tech. rep., National Renewable Energy Lab.(NREL), Golden, CO (United
+  States), 2011.
+
+\bibitem{hake_german_2015}
+{\sc Hake, J.-F., Fischer, W., Venghaus, S., and Weckenbrock, C.}
+\newblock The {German} {Energiewende}–history and status quo.
+\newblock {\em Energy 92\/} (2015), 532--546.
+\newblock Publisher: Elsevier.
+
+\bibitem{hong_citybes_2016}
+{\sc Hong, T., Chen, Y., Lee, S.~H., and Piette, M.~A.}
+\newblock {CityBES}: {A} web-based platform to support city-scale building
+  energy efficiency.
+\newblock {\em Urban Computing\/} (2016).
+
+\bibitem{hong_ten_2020}
+{\sc Hong, T., Chen, Y., Luo, X., Luo, N., and Lee, S.~H.}
+\newblock Ten questions on urban building energy modeling.
+\newblock {\em Building and Environment 168\/} (2020), 106508.
+\newblock Publisher: Elsevier.
+
+\bibitem{hong_advances_2016}
+{\sc Hong, T., Taylor-Lange, S.~C., D'Oca, S., Yan, D., and Corgnati, S.~P.}
+\newblock Advances in research and applications of energy-related occupant
+  behavior in buildings.
+\newblock {\em Energy and Buildings 116\/} (2016), 694--702.
+\newblock Publisher: Elsevier.
+
+\bibitem{huo_chinas_2019}
+{\sc Huo, T., Cai, W., Ren, H., Feng, W., Zhu, M., Lang, N., and Gao, J.}
+\newblock China's building stock estimation and energy intensity analysis.
+\newblock {\em Journal of Cleaner Production 207\/} (2019), 801--813.
+\newblock Publisher: Elsevier.
+
+\bibitem{huo_estimating_2019}
+{\sc Huo, T., Ren, H., and Cai, W.}
+\newblock Estimating urban residential building-related energy consumption and
+  energy intensity in {China} based on improved building stock turnover model.
+\newblock {\em Science of the Total Environment 650\/} (2019), 427--437.
+\newblock Publisher: Elsevier.
+
+\bibitem{issermann_wuppertal_2019}
+{\sc Issermann, M.}
+\newblock Wuppertal {WorldWind} {Environmental} {Monitor}, 2019.
+
+\bibitem{kazhdan_screened_2013}
+{\sc Kazhdan, M., and Hoppe, H.}
+\newblock Screened poisson surface reconstruction.
+\newblock {\em ACM Transactions on Graphics (ToG) 32}, 3 (2013), 29.
+
+\bibitem{kfw_energy-efficient_2011}
+{\sc {KfW}}.
+\newblock Energy-efficient urban redevelopment, 2011.
+\newblock Library Catalog: www.energetische-stadtsanierung.info.
+
+\bibitem{kwon_optimal_2016}
+{\sc Kwon, S., Ntaimo, L., and Gautam, N.}
+\newblock Optimal day-ahead power procurement with renewable energy and demand
+  response.
+\newblock {\em IEEE Transactions on Power Systems 32}, 5 (2016), 3924--3933.
+\newblock Publisher: IEEE.
+
+\bibitem{leibowicz_optimal_2018}
+{\sc Leibowicz, B.~D., Lanham, C.~M., Brozynski, M.~T., V\'{a}zquez-Canteli,
+  J.~R., Castej\'{o}n, N.~C., and Nagy, Z.}
+\newblock Optimal decarbonization pathways for urban residential building
+  energy services.
+\newblock {\em Applied energy 230\/} (2018), 1311--1325.
+\newblock Publisher: Elsevier.
+
+\bibitem{li_modeling_2017}
+{\sc Li, W., Zhou, Y., Cetin, K., Eom, J., Wang, Y., Chen, G., and Zhang, X.}
+\newblock Modeling urban building energy use: {A} review of modeling approaches
+  and procedures.
+\newblock {\em Energy 141\/} (2017), 2445--2457.
+\newblock Publisher: Elsevier.
+
+\bibitem{lindberg_urban_2018}
+{\sc Lindberg, F., Grimmond, C. S.~B., Gabey, A., Huang, B., Kent, C.~W., Sun,
+  T., Theeuwes, N.~E., J\"{a}rvi, L., Ward, H.~C., and Capel-Timms, I.}
+\newblock Urban {Multi}-scale {Environmental} {Predictor} ({UMEP}): {An}
+  integrated tool for city-based climate services.
+\newblock {\em Environmental Modelling \& Software 99\/} (2018), 70--87.
+\newblock Publisher: Elsevier.
+
+\bibitem{loga_tabulascientific_2012}
+{\sc Loga, T., Diefenbach, N., Stein, B., and Born, R.}
+\newblock {TABULA}-{Scientific} {Report} {Germany} {Further} {Development} of
+  the {German} {Residential} {Building} {Typology}.
+\newblock {\em Institut Wohnen und Umwelt, Darmstadt\/} (2012).
+
+\bibitem{loga_berucksichtigung_2017}
+{\sc Loga, T., Hacke, U., M{\"u}ller, A., Großklos, M., Stein, B., Born, R.,
+  Renz, I., Hinz, E., Cischinsky, H., and H{\"o}rner, M.}
+\newblock Ber{\"u}cksichtigung des {Nutzerverhaltens} bei energetischen
+  {Verbesserungen}.
+\newblock Tech. rep., IWU - Institut Wohnen und Umwelt, Darmstadt, Germany,
+  2017.
+
+\bibitem{loga_tabula_2016}
+{\sc Loga, T., Stein, B., and Diefenbach, N.}
+\newblock {TABULA} building typologies in 20 {European} countries - {Making}
+  energy-related features of residential building stocks comparable.
+\newblock {\em Energy and Buildings 132\/} (2016), 4--12.
+
+\bibitem{nouidui_functional_2014}
+{\sc Nouidui, T., Wetter, M., and Zuo, W.}
+\newblock Functional mock-up unit for co-simulation import in {EnergyPlus}.
+\newblock {\em Journal of Building Performance Simulation 7}, 3 (2014),
+  192--202.
+\newblock Publisher: Taylor \& Francis.
+
+\bibitem{nouvel_simstadt_2015}
+{\sc Nouvel, R., Brassel, K.-H., Bruse, M., Duminil, E., Coors, V., Eicker, U.,
+  and Robinson, D.}
+\newblock {SimStadt}, a new workflow-driven urban energy simulation platform
+  for {CityGML} city models.
+\newblock In {\em Proceedings of {International} {Conference} {CISBAT} 2015
+  {Future} {Buildings} and {Districts} {Sustainability} from {Nano} to {Urban}
+  {Scale}\/} (2015), LESO-PB, EPFL, pp.~889--894.
+
+\bibitem{oneill_uncertainty_2017}
+{\sc O'Neill, Z., and Niu, F.}
+\newblock Uncertainty and sensitivity analysis of spatio-temporal occupant
+  behaviors on residential building energy usage utilizing {Karhunen}-{Loève}
+  expansion.
+\newblock {\em Building and Environment 115\/} (2017), 157--172.
+\newblock Publisher: Elsevier.
+
+\bibitem{OpenStreetMap}
+{\sc {OpenStreetMap contributors}}.
+\newblock Planet dump retrieved from https://planet.osm.org.
+
+\bibitem{openweather_weather_2020}
+{\sc {Openweather}}.
+\newblock Weather {API}, 2020.
+
+\bibitem{pasichnyi_data-driven_2019}
+{\sc Pasichnyi, O., Wallin, J., and Kordas, O.}
+\newblock Data-driven building archetypes for urban building energy modelling.
+\newblock {\em Energy 181\/} (2019), 360--377.
+\newblock Publisher: Elsevier.
+
+\bibitem{pflugradt_synthesizing_2017}
+{\sc Pflugradt, N., and Muntwyler, U.}
+\newblock Synthesizing residential load profiles using behavior simulation.
+\newblock {\em Energy Procedia 122\/} (2017), 655--660.
+\newblock Publisher: Elsevier.
+
+\bibitem{pflugradt_modellierung_2016}
+{\sc Pflugradt, N.~D.}
+\newblock Modellierung von {Wasser} und {Energieverbr{\"a}uchen} in
+  {Haushalten}.
+
+\bibitem{reinhart_umi-urban_2013}
+{\sc Reinhart, C., Dogan, T., Jakubiec, J.~A., Rakha, T., and Sang, A.}
+\newblock Umi-an urban simulation environment for building energy use,
+  daylighting and walkability.
+\newblock In {\em 13th {Conference} of {International} {Building} {Performance}
+  {Simulation} {Association}, {Chambery}, {France}\/} (2013).
+
+\bibitem{reinhart_urban_2016}
+{\sc Reinhart, C.~F., and Davila, C.~C.}
+\newblock Urban building energy modeling-{A} review of a nascent field.
+\newblock {\em Building and Environment 97\/} (2016), 196--202.
+
+\bibitem{reutter_low_2012}
+{\sc Reutter, O., Bierwirth, A., Gr{\"o}ne, M.-C., Lemken, T., Lucas, R.,
+  Mattner, T., Meinel, U., Palzkill-Vorbeck, A., Ritthoff, M., and Rudolph, F.}
+\newblock Low carbon city {Wuppertal} 2050: {Sondierungs}studie.
+\newblock {\em Abschlussbericht. Wuppertal\/} (2012).
+
+\bibitem{robinson_citysim_2009}
+{\sc Robinson, D., Haldi, F., Leroux, P., Perez, D., Rasheed, A., and Wilke,
+  U.}
+\newblock {CitySim}: {Comprehensive} micro-simulation of resource flows for
+  sustainable urban planning.
+\newblock In {\em Proceedings of the {Eleventh} {International} {IBPSA}
+  {Conference}\/} (2009), pp.~1083--1090.
+\newblock Issue: CONF.
+
+\bibitem{saele_demand_2011}
+{\sc S{\ae}le, H., and Grande, O.~S.}
+\newblock Demand response from household customers: {Experiences} from a pilot
+  study in {Norway}.
+\newblock {\em IEEE Transactions on Smart Grid 2}, 1 (2011), 102--109.
+\newblock Publisher: IEEE.
+
+\bibitem{santosh_eppy_2019}
+{\sc Santosh, P.}
+\newblock Eppy 0.5.52 documentation, 2019.
+
+\bibitem{schiefelbein_development_2016}
+{\sc Schiefelbein, J., Diekerhof, M., Javadi, A.~P., Bode, G.~T., Streblow, R.,
+  Müller, D., and Monti, A.}
+\newblock {\em Development of a tool chain for complex city district energy
+  system modeling and simulation}.
+\newblock Universit\"{a}tsbibliothek der RWTH Aachen, 2016.
+
+\bibitem{scholz_considerations_2014}
+{\sc Scholz, R., Beckmann, M., Pieper, C., Muster, M., and Weber, R.}
+\newblock Considerations on providing the energy needs using exclusively
+  renewable sources: {Energiewende} in {Germany}.
+\newblock {\em Renewable and Sustainable Energy Reviews 35\/} (2014), 109--125.
+\newblock Publisher: Elsevier.
+
+\bibitem{schroder_reale_2014}
+{\sc Schr{\"o}der, F.~P., Papert, O., Boegelein, T., Navarro, H., and Mundry,
+  B.}
+\newblock Reale {Trends} des spezifischen {Energieverbrauchs} und
+  repr{\"a}sentativer {Wohnraumtemperierung} bei steigendem
+  {Modernisierungsgrad} im {Wohnungsbestand}.
+\newblock {\em Bauphysik 36}, 6 (2014), 309--324.
+\newblock Publisher: Wiley Online Library.
+
+\bibitem{sola_multi-domain_2019}
+{\sc Sola, A., Corchero, C., Salom, J., and Sanmarti, M.}
+\newblock Multi-domain {Urban}-{Scale} {Energy} {Modelling} tools: a {Review}.
+\newblock {\em Sustainable Cities and Society\/} (2019), 101872.
+
+\bibitem{stadt_wuppertal_wohngebaude-baujahre_2020}
+{\sc {Stadt Wuppertal}}.
+\newblock Wohngeb{\"a}ude-{Baujahre} {Wuppertal} {\textbar} {Offene} {Daten}
+  {Wuppertal}, 2020.
+
+\bibitem{statistisches_gebaude_2011}
+{\sc {Statistisches Bundesamt}}.
+\newblock Geb{\"a}ude- und {Wohnungsz{\"a}hlung}, 2011.
+
+\bibitem{stein_energetische_2014}
+{\sc Stein, B., Grafe, M., {Tobias Loga}, Enseling, A., and Werner, P.}
+\newblock Energetische {Stadtsanierung} - {Integriertes} {Quartierskonzept}
+  {Mainz}-{Lerchenberg}.
+\newblock Tech. rep., IWU-Institut Wohnen und Umwelt, Darmstadt/Germany, 2014.
+
+\bibitem{steiniger_2012_2013}
+{\sc Steiniger, S., and Hunter, A.~J.}
+\newblock The 2012 free and open source {GIS} software map-{A} guide to
+  facilitate research, development, and adoption.
+\newblock {\em Computers, environment and urban systems 39\/} (2013), 136--150.
+\newblock Publisher: Elsevier.
+
+\bibitem{suberu_energy_2014}
+{\sc Suberu, M.~Y., Mustafa, M.~W., and Bashir, N.}
+\newblock Energy storage systems for renewable energy power sector integration
+  and mitigation of intermittency.
+\newblock {\em Renewable and Sustainable Energy Reviews 35\/} (2014), 499--514.
+\newblock Publisher: Elsevier.
+
+\bibitem{tomorrow_live_2020}
+{\sc {Tomorrow}}.
+\newblock Live {CO2} emissions of electricity consumption, 2020.
+
+\bibitem{urge-vorsatz_how_2011}
+{\sc {\"U}rge-Vorsatz, D., Petrichenko, K., and Butcher, A.~C.}
+\newblock How far can buildings take us in solving climate change? {A} novel
+  approach to building energy and related emission forecasting.
+\newblock {\em Energy Efficiency First: The Foundation of a Low-Carbon
+  Society\/} (2011).
+\newblock Publisher: Belambra Presqu’île de Giens France.
+
+\bibitem{wang_operational_2015}
+{\sc Wang, X., Palazoglu, A., and El-Farra, N.~H.}
+\newblock Operational optimization and demand response of hybrid renewable
+  energy systems.
+\newblock {\em Applied Energy 143\/} (2015), 324--335.
+\newblock Publisher: Elsevier.
+
+\bibitem{wilke_bottom-up_2013}
+{\sc Wilke, U., Haldi, F., Scartezzini, J.-L., and Robinson, D.}
+\newblock A bottom-up stochastic model to predict building occupants
+  time-dependent activities.
+\newblock {\em Building and Environment 60\/} (2013), 254--264.
+\newblock Publisher: Elsevier.
+
+\end{thebibliography}

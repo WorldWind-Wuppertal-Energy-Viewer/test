@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Scenario: Demand response</TITLE>
+<META NAME="description" CONTENT="Scenario: Demand response">
+<META NAME="keywords" CONTENT="wupperwwem_online">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="wupperwwem_online.css">
+
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="node7.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html128"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html126"
+  HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html122"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html129"
+  HREF="node10.html">Discussion</A>
+<B> Up:</B> <A NAME="tex2html127"
+  HREF="node7.html">Results</A>
+<B> Previous:</B> <A NAME="tex2html123"
+  HREF="node8.html">Comparison to reference studies</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00042000000000000000">
+Scenario: Demand response</A>
+</H2>
+
+<P>
+The transition of the German energy supply to a low carbon system will not be possible without the decarbonisation of heat production [<A
+ HREF="node15.html#connolly_heat_2014">9</A>], which represents almost two-third of Germany's energy consumption. Electrification by the means of heat pumps is suggested to play a considerable role [<A
+ HREF="node15.html#leibowicz_optimal_2018">35</A>]. Heat pumps use electricity to transfer heat from colder sources (e.g. outside air or underground) to heat sinks through the compression of a medium called refrigerant.
+<BR>
+To demonstrate one possible application of UBE-FMI and which role it can play for the future management of energy systems, a scenario with the simulation conditions for "live" simulation in Table <A HREF="node6.html#tab:real">1</A> was constructed. But the heating and hot water system in every building were replaced with heat pumps. The spatial variations (two-dimensional) of climate conditions were estimated with the Urban Multi-scale Environmental Predictor (UMEP) [<A
+ HREF="node15.html#lindberg_urban_2018">37</A>] to approximate urban microclimate. The outcome for air temperature of one time step can be seen in Figure <A HREF="#fig:temp">11</A>. The spatially varying climate conditions could directly be applied to the closest building surface of every individual building due to the FMI implementation of UBE-FMI. Energy simulations for every building with their own specific and heterogeneous climate conditions were conducted for the period of one week-day. The results of electricity demand for all buildings in the area are aggregated in Figure <A HREF="#fig:scen">12</A>. It shows a week-day demand for electricity with an high temporal resolution (10min). The demand peaks in the evening hours when the occupants return home and require heating and hot water. Another peak is in the morning hours. The demand is low during working hours as residential buildings are less occupied. The ENTSO-E Transparency Platform of the European transmission system operators [<A
+ HREF="node15.html#entso-e_entso-e_2020">12</A>] provides data of the European electricity composition by source. Figure <A HREF="#fig:scen">12</A> illustrates that the largest gap in the satisfaction of electricity demand from renewable sources is during the peak hours in the evening. Even with continuing efforts in the expansion of renewable energy supply, the satisfaction of peak demand will pose a challenge. Therefore, demand response strategies are an appropriate mean to reduce peak demand [<A
+ HREF="node15.html#saele_demand_2011">53</A>,<A
+ HREF="node15.html#gils_assessment_2014">20</A>]. In Figure <A HREF="#fig:scen">12</A>, the peak load can be reduced by 25MWh if the thermostat setpoint is lowered by <SPAN CLASS="MATH"><IMG
+ WIDTH="32" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.png"
+ ALT="$3^\circ C$"></SPAN> during the peak hours. UBE-FMI can predict this impact when supplied with weather forecasts. In the light of climate change and the possibility to run heat pumps in cooling mode, demand response strategies and the ability to estimate their impact on demand will also become more relevant in the summer season. UBE-FMI could contribute to better align demand with the supply of renewable energy.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:temp"></A><A NAME="306"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 11:</STRONG>
+Spatial variation (two-dimensional) of air temperature in the study area at 12.30pm on February 3, 2020.</CAPTION>
+<TR><TD><img src="umc.jpg" width="898" height="1112"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:scen"></A><A NAME="311"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 12:</STRONG>
+Week-day (February 3, 2020) demand of electricity based on the scenario with heat pumps and demand response.</CAPTION>
+<TR><TD><iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="scenerio_control.html" height="1000" width="1700"></iframe></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html128"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html126"
+  HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html122"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html129"
+  HREF="node10.html">Discussion</A>
+<B> Up:</B> <A NAME="tex2html127"
+  HREF="node7.html">Results</A>
+<B> Previous:</B> <A NAME="tex2html123"
+  HREF="node8.html">Comparison to reference studies</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Maikel Issermann
+</ADDRESS>
+</BODY>
+</HTML>
