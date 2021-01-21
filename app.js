@@ -55,7 +55,7 @@ requirejs(['./WorldWindShim',
         var layer_array = {};
         var workers = 0, queue = [];
         function do_work() {
-          if (workers < 15 && queue.length>0) {
+          if (workers < 10 && queue.length>0) {
             workers++;
             queue.shift()(()=> {
               workers--;
